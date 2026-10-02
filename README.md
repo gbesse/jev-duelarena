@@ -35,6 +35,10 @@ Each match sends one `choice` question per declared criterion over `{a,b}`. The 
 
 Declared criteria are not universal quality. Defaults are illustrative, not calibrated. Jev can be affected by injected text and is weak at counting, arithmetic and indirect instructions; code handles tournament structure and totals. History is local JSONL, not a multi-user database. The server has no built-in authentication.
 
+## Shareable demo report
+
+Run `npm run demo:report` to capture this repository’s bundled example as one JSON object with the project purpose, version and complete demo output. The command fails if the demo fails, so the report is useful when sharing a reproducible first look or reporting unexpected behavior. The bundled demo’s data and safety boundaries still apply.
+
 ## Validation
 
 `npm run check`, `npm run typecheck`, `npm test`, and `npm run demo` run in CI on Node 22 and 24. Live smoke is opt-in and capped at two paid calls.

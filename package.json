@@ -1,1 +1,46 @@
-{"name":"@gbesse/jev-duelarena","version":"0.1.0","description":"Run visible criterion-by-criterion text duels and honestly progressive elimination brackets with Jev.","type":"module","exports":{".":{"types":"./src/index.d.mts","import":"./src/index.mjs"}},"bin":{"jev-duelarena":"./bin/jev-duelarena.mjs"},"files":["src","bin","packs","examples","docs","README.md","LICENSE"],"scripts":{"test":"node --test","check":"node scripts/check.mjs","demo":"node examples/demo.mjs","typecheck":"tsc --noEmit --strict --target ES2022 --module NodeNext docs/public-api-types.mts","live-smoke":"node scripts/live-smoke.mjs"},"engines":{"node":">=22"},"license":"MIT","repository":{"type":"git","url":"git+https://github.com/gbesse/jev-duelarena.git"},"bugs":{"url":"https://github.com/gbesse/jev-duelarena/issues"},"devDependencies":{"typescript":"5.9.3"}}
+{
+  "name": "@gbesse/jev-duelarena",
+  "version": "0.1.1",
+  "description": "Run visible criterion-by-criterion text duels and honestly progressive elimination brackets with Jev.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.mts",
+      "import": "./src/index.mjs"
+    }
+  },
+  "bin": {
+    "jev-duelarena": "./bin/jev-duelarena.mjs"
+  },
+  "files": [
+    "src",
+    "bin",
+    "packs",
+    "examples",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node scripts/check.mjs",
+    "demo": "node examples/demo.mjs",
+    "typecheck": "tsc --noEmit --strict --target ES2022 --module NodeNext docs/public-api-types.mts",
+    "live-smoke": "node scripts/live-smoke.mjs",
+    "demo:report": "node examples/demo-report.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbesse/jev-duelarena.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gbesse/jev-duelarena/issues"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}
