@@ -48,3 +48,11 @@ Run `npm run demo:report` to capture this repository’s bundled example as one 
 [DecisionPacks](https://github.com/gbesse/decisionpacks) · [Question Forge](https://github.com/gbesse/question-forge) · [jev-rerank-server](https://github.com/gbesse/jev-rerank-server)
 
 Independent project; not affiliated with TypeSafe AI. [TypeSafe API](https://docs.typesafe.ai/api) · [known model limitations](https://docs.typesafe.ai/model-jaggedness/jev-1.13)
+
+## October 2026 improvement · Amélioration d’octobre 2026 · Mejora de octubre de 2026
+
+An unknown provider choice now stops the duel instead of silently awarding the weight to option B. Run `npm test` offline.
+
+Un choix fournisseur inconnu arrête désormais le duel au lieu d’attribuer silencieusement le poids à l’option B. Lancez `npm test` hors ligne.
+
+Una elección desconocida del proveedor ahora detiene el duelo en vez de asignar silenciosamente el peso a la opción B. Ejecute `npm test` sin conexión.
