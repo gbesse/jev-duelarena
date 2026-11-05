@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {duelBothOrders}from '../src/index.mjs';const pack={id:'p',title:'p',criteria:[{id:'q',instructions:'q',weight:1,criteria:{a:'A',b:'B'}}]};
+const provider=choice=>async()=>({model:'fake',answers:{q:{choice,probabilities:{a:.9,b:.1}}},usage:{input_tokens:1}});
+test('always choosing first exposes order disagreement',async()=>{const x=await duelBothOrders('one','two',{pack,provider:provider('a')});assert.equal(x.consistent,false);assert.deepEqual(x.originalOrderWinners,['a','b']);assert.equal(x.winner,null);});
+test('content stable winner survives swap',async()=>{const p=async({state})=>({model:'fake',answers:{q:{choice:state.a==='one'?'a':'b',probabilities:{a:.5,b:.5}}},usage:{input_tokens:1}});assert.equal((await duelBothOrders('one','two',{pack,provider:p})).winner,'a');});
