@@ -56,3 +56,12 @@ An unknown provider choice now stops the duel instead of silently awarding the w
 Un choix fournisseur inconnu arrête désormais le duel au lieu d’attribuer silencieusement le poids à l’option B. Lancez `npm test` hors ligne.
 
 Una elección desconocida del proveedor ahora detiene el duelo en vez de asignar silenciosamente el peso a la opción B. Ejecute `npm test` sin conexión.
+
+
+## 2026-11-05 — FR / EN / ES
+
+FR : `duelBothOrders(a,b,{pack,provider})` juge les deux ordres et remappe le gagnant aux options initiales. Un juge choisissant toujours la première option donne `consistent:false`, sans faux gagnant. Deux requêtes explicites ; test apparié, pas estimation globale de biais.
+
+EN: `duelBothOrders(a,b,{pack,provider})` judges both orders and remaps winners to original options. A judge always picking first gives `consistent:false`, without a false winner. Two explicit requests; paired test, not global bias estimation.
+
+ES: `duelBothOrders(a,b,{pack,provider})` juzga ambos órdenes y remapea ganadores a opciones iniciales. Juez que siempre elige primero da `consistent:false`, sin falso ganador. Dos solicitudes; prueba emparejada, no estimación global de sesgo.
