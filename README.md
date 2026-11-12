@@ -65,3 +65,12 @@ FR : `duelBothOrders(a,b,{pack,provider})` juge les deux ordres et remappe le ga
 EN: `duelBothOrders(a,b,{pack,provider})` judges both orders and remaps winners to original options. A judge always picking first gives `consistent:false`, without a false winner. Two explicit requests; paired test, not global bias estimation.
 
 ES: `duelBothOrders(a,b,{pack,provider})` juzga ambos órdenes y remapea ganadores a opciones iniciales. Juez que siempre elige primero da `consistent:false`, sin falso ganador. Dos solicitudes; prueba emparejada, no estimación global de sesgo.
+
+
+## 2026-11-12 — FR / EN / ES
+
+FR : Comparer toutes les paires dans les deux ordres avec budget préflight et désaccords de position visibles.
+
+EN: Compare every pair in both orders with preflight budget and visible position disagreements.
+
+ES: Comparar cada par en ambos órdenes con presupuesto previo y desacuerdos de posición visibles.
