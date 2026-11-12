@@ -19,3 +19,5 @@ export async function duelBothOrders(a,b,{pack,provider}){
  const first=originalWinner(forward),second=originalWinner(reverse);
  return {forward,reverse,originalOrderWinners:[first,second],consistent:first===second,winner:first===second?first:null,requests:2,positionBiasTest:'paired_order_swap_not_general_bias_estimate'};
 }
+
+export * from './sprint-nov12.mjs';

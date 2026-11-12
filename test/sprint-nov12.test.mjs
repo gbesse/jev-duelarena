@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {roundRobinBothOrders}from '../src/index.mjs';const pack={id:'p',title:'fixture',criteria:[{id:'q',instructions:'fixture',weight:1,criteria:{a:'left',b:'right'}}]};const provider=async({state})=>({model:'fixture',usage:{input_tokens:1},answers:{q:{choice:state.a<state.b?'a':'b',probabilities:{a:.5,b:.5}}}});
+test('round robin measures both presentations',async()=>{const x=await roundRobinBothOrders(['A','B','C'],{pack,provider,maxRequests:6});assert.equal(x.requests,6);assert.equal(x.pairs.length,3);assert.equal(x.scores[0].consistentWins,2);});
+test('request budget checked before any provider call',async()=>{let calls=0;await assert.rejects(roundRobinBothOrders(['A','B','C'],{pack,provider:async()=>{calls++;},maxRequests:5}));assert.equal(calls,0);});
+test('position-biased judge remains inconsistent rather than declaring winner',async()=>{const x=await roundRobinBothOrders(['A','B'],{pack,provider:async()=>({model:'fixture',usage:{input_tokens:1},answers:{q:{choice:'a'}}})});assert.equal(x.scores[0].inconsistentPairs,1);assert.equal(x.scores[0].consistentWins,0);});
